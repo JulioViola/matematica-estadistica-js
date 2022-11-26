@@ -16,9 +16,10 @@ function hacerDescuento (event) {
         codigo: 'julio2022',
         descuento: 20,
         }
-        
-    if (!precioValue & !descuentoValue){
+     if (!precioValue) {
         resultado.innerText = "Por favor completa los campos";
+    } else if (!precioValue & !descuentoValue){
+        resultado.innerText = "Por favor completa los campos";  
     } else if (descuentoValue > 100){
         resultado.innerText = "El descuento debe ser menor a 100%";
     } else if (codigoDescuentoValue == codigoDescuentoExistente.codigo) {
